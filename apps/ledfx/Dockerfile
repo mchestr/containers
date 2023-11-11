@@ -50,3 +50,5 @@ COPY apps/ledfx/setup-files/ /app/
 RUN chmod a+wrx /app/*
 
 ENTRYPOINT ./entrypoint.sh
+
+LABEL org.opencontainers.image.source="https://github.com/LedFx/LedFx"

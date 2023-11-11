@@ -25,3 +25,5 @@ COPY apps/snapserver/startup.sh startup.sh
 
 EXPOSE 1704 1705 1780
 ENTRYPOINT [ "./startup.sh" ]
+
+LABEL org.opencontainers.image.source="https://github.com/badaix/snapcast"
