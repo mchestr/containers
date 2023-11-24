@@ -1,5 +1,7 @@
 ---
 name: "Image Build"
+permissions:
+  packages: write
 
 on:
   workflow_call:
@@ -80,6 +82,8 @@ jobs:
   build-platform-images:
     name: Build/Test ${{ matrix.image.name }} (${{ matrix.image.platform }})
     needs: prepare
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     if: ${{ toJSON(fromJSON(needs.prepare.outputs.matrices).imagePlatforms) != '[]' && toJSON(fromJSON(needs.prepare.outputs.matrices).imagePlatforms) != '' }}
     strategy:
@@ -215,6 +219,8 @@ jobs:
   merge:
     name: Merge ${{ matrix.image.name }}
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     needs:
       - prepare
       - build-platform-images
@@ -291,14 +297,14 @@ jobs:
           echo "message=💥 ${{ matrix.image.name }} (${{ matrix.image.tags[0] }})" >> $GITHUB_OUTPUT
           echo "color=0xFF0000" >> $GITHUB_OUTPUT
 
-      - name: Send Discord Webhook
-        uses: sarisia/actions-status-discord@v1
-        if: ${{ always() && inputs.sendNotifications == 'true' }}
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          title: ${{ steps.build-failed.outputs.message || steps.build-success.outputs.message }}
-          color: ${{ steps.build-failed.outputs.color || steps.build-success.outputs.color }}
-          username: GitHub Actions
+      # - name: Send Discord Webhook
+      #   uses: sarisia/actions-status-discord@v1
+      #   if: ${{ always() && inputs.sendNotifications == 'true' }}
+      #   with:
+      #     webhook: ${{ secrets.DISCORD_WEBHOOK }}
+      #     title: ${{ steps.build-failed.outputs.message || steps.build-success.outputs.message }}
+      #     color: ${{ steps.build-failed.outputs.color || steps.build-success.outputs.color }}
+      #     username: GitHub Actions
 
   # Summarize matrix https://github.community/t/status-check-for-a-matrix-jobs/127354/7
   build_success:
