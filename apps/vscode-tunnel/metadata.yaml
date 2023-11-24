@@ -1,0 +1,10 @@
+---
+app: vscode-tunnel
+base: false
+semantic_versioning: true
+channels:
+  - name: main
+    platforms: ["linux/amd64"]
+    stable: true
+    tests:
+      enabled: false
