@@ -13,9 +13,8 @@ RUN apt-get install -y gcc \
                       portaudio19-dev \
                       avahi-daemon \
                       pulseaudio \
-                      python3-dev \
-                      cmake
-RUN pip install --upgrade pip wheel setuptools numpy
+                      python3-dev
+RUN pip install --upgrade pip wheel setuptools numpy cmake
 RUN pip install lastversion
 RUN pip install git+https://github.com/LedFx/LedFx.git@${VERSION}
 
