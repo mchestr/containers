@@ -17,8 +17,14 @@ RUN apt-get install -y gcc \
                       cmake
 RUN pip install --upgrade pip wheel setuptools numpy cmake
 RUN pip install lastversion
+# Install cmake >= 3.15
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.28.2/cmake-3.28.2.tar.gz \
+        && tar -xzvf cmake-3.28.2.tar.gz \
+        && cd cmake-3.28.2 \
+        && ./bootstrap \
+        && make -j$(nproc) \
+        && make install
 RUN pip install git+https://github.com/LedFx/LedFx.git@${VERSION}
-
 
 RUN apt-get install -y alsa-utils
 RUN adduser root pulse-access
