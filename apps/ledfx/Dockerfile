@@ -13,8 +13,7 @@ RUN apt-get install -y gcc \
                       portaudio19-dev \
                       avahi-daemon \
                       pulseaudio \
-                      python3-dev \
-                      cmake
+                      python3-dev
 RUN pip install --upgrade pip wheel setuptools numpy cmake
 RUN pip install lastversion
 # Install cmake >= 3.15
