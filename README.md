@@ -68,7 +68,7 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
 [ledfx](https://github.com/mchestr/containers/pkgs/container/ledfx) | main | ghcr.io/mchestr/ledfx |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v2](https://img.shields.io/badge/v2-blue?style=flat-square) ![v2.0](https://img.shields.io/badge/v2.0-blue?style=flat-square) ![v2.0.94](https://img.shields.io/badge/v2.0.94-blue?style=flat-square)
-[snapserver](https://github.com/mchestr/containers/pkgs/container/snapserver) | main | ghcr.io/mchestr/snapserver |![0](https://img.shields.io/badge/0-blue?style=flat-square) ![0.27](https://img.shields.io/badge/0.27-blue?style=flat-square) ![0.27.0](https://img.shields.io/badge/0.27.0-blue?style=flat-square) ![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square)
+[snapserver]() | main | ghcr.io/mchestr/snapserver |
 [vscode-tunnel](https://github.com/mchestr/containers/pkgs/container/vscode-tunnel) | main | ghcr.io/mchestr/vscode-tunnel |![1](https://img.shields.io/badge/1-blue?style=flat-square) ![1.87](https://img.shields.io/badge/1.87-blue?style=flat-square) ![1.87.0](https://img.shields.io/badge/1.87.0-blue?style=flat-square) ![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square)
 
 
