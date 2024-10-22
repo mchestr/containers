@@ -1,4 +1,4 @@
-FROM ghcr.io/onedr0p/alpine:3.19.1
+FROM docker.io/library/alpine:3.20
 
 RUN apk add --no-cache git curl nodejs-lts openssh alpine-zsh-config python3 && \
     curl -sL "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64" \
