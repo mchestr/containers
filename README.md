@@ -67,7 +67,7 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
-[vscode-tunnel](https://github.com/mchestr/containers/pkgs/container/vscode-tunnel) | main | ghcr.io/mchestr/vscode-tunnel |![1](https://img.shields.io/badge/1-blue?style=flat-square) ![1.121](https://img.shields.io/badge/1.121-blue?style=flat-square) ![1.121.0](https://img.shields.io/badge/1.121.0-blue?style=flat-square) ![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square)
+[vscode-tunnel](https://github.com/mchestr/containers/pkgs/container/vscode-tunnel) | main | ghcr.io/mchestr/vscode-tunnel |![1](https://img.shields.io/badge/1-blue?style=flat-square) ![1.122](https://img.shields.io/badge/1.122-blue?style=flat-square) ![1.122.0](https://img.shields.io/badge/1.122.0-blue?style=flat-square) ![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square)
 
 
 ## Contributing
